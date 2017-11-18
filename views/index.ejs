@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+<h2><%= title %></h2>
+<form method='POST' action='/users/add'>
+<label>Full Name</label><br>
+<input type='text' name='name'><br>
+<label>Age</label><br>
+<input type='number' name='age'><br>
+<label>Email</label><br>
+<input type='text' name='email'><br><br>
+<input type='submit' value='Add'>
+</form>
+
+<h2><%= title %></h2>
+<ul>
+<% users.forEach( function(user) { %>
+<li><%= user.name %> (<%= user.age %>) <%= user.email %></li>
+<% }) %>
+</ul>
+
+<% include partials/footer %>
+
